@@ -1,0 +1,11 @@
+#Harry Derouich
+#02/10/14
+#Am I old enough to drive?
+
+print("Hello user")
+age = int(input("Please enter your age: "))
+
+if age >=17:
+    print("You can drive now :D")
+else:
+    print("Sorry you can't drive just yet")
