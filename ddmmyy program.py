@@ -1,3 +1,4 @@
+
 #Harry Derouich
 #03/10/14
 #Stretch and challenge exercise 2
@@ -7,11 +8,8 @@ date = input("Please enter the date in the format dd mm yy, (e.g. 10th October 1
 #string splitting
 day = int(date[:2])
 month = int(date[3:5])
-year = int(date[6:])
+year = int(date[6:8])
 
-print(day)
-print(month)
-print(year)
 
 ##day calculations below##
 if day == 0o1:
@@ -76,18 +74,18 @@ print(month_format)
 
 
 ####year calculations below####
-#if year == 00:
-   # year_format = "2000"
-#elif year == 01:
-   # year_format = "2001"
-#else:
-   # year_format = "This isnt working correctly"
+if 00 <= year <= 9:
+    year_format = "200{0}".format(year)
+elif 10 <= year <= 30:
+    year_format = "20{0}".format(year)
+else:
+    year_format = "19{0}".format(year)
 
-#print(year_format)
+print(year_format)
 
 ####end year calculations####
 
-print("The date is: {0} {1}".format(day_format, month_format))
+print("The date is: {0} {1} {2}".format(day_format, month_format, year_format))
 
 
 
